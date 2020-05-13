@@ -11,20 +11,20 @@ class Morpheus
       go_to_workspace
     end
   end
-  
+
   private
 
   attr_accessor :options
 
   def go_to_workspace
-    puts("cd #{options[:workspace]}")
+    system("cd #{options[:workspace]}")
   end
 
   def go_to(container)
-    puts("cd #{container}")
+    system("cd #{container}")
   end
 
   def wake_up (container)
-    puts("docker-compose up -d")
+    system("docker-compose up -d")
   end
 end
