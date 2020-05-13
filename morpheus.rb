@@ -15,14 +15,14 @@ class Morpheus
   attr_accessor :options
 
   def go_to_workspace
-    %x["cd #{options[:workspace]}"]
+    system("cd #{options[:workspace]}")
   end
 
   def go_to(container)
-    %x["cd #{options[:workspace]}/#{container}/"]
+    system("cd #{options[:workspace]}/#{container}/")
   end
 
   def wake_up (container)
-    %x["docker-compose up -d"]
+    system("docker-compose up -d")
   end
 end
