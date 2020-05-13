@@ -19,7 +19,7 @@ class Morpheus
   end
 
   def go_to(container)
-    system("cd #{options[:workspace]}/#{container}/")
+    Dir.chdir("#{options[:workspace]}/#{container}/")
   end
 
   def wake_up (container)
