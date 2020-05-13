@@ -14,10 +14,6 @@ class Morpheus
 
   attr_accessor :options
 
-  def go_to_workspace
-    system("cd #{options[:workspace]}")
-  end
-
   def go_to(container)
     Dir.chdir("#{options[:workspace]}/#{container}/")
   end
